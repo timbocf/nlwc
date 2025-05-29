@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>
-<?php 
-if(ucwords($_REQUEST['page']) == "Home"){
-	echo("");
-}else{
-	echo(ucwords($_REQUEST['page']).' // ');
-}
-?>New Life Worship Center, Gladewater TX</title>
+<title>New Life Worship Center, Gladewater TX</title>
 <link rel="stylesheet" type="text/css" href="css/general.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/<?php echo $css ?>" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/nivo-slider.css" media="screen" />
@@ -58,14 +51,8 @@ if(ucwords($_REQUEST['page']) == "Home"){
     </div>
 
     <div id="main">
-		<?php if($_REQUEST['page'] !== "reports"){
-				if($_REQUEST['page'] !== 'admin'){
-					include "includes/calendar.php";
-				}
-			}?>
+		<?php include "calendar.php" ?>
 
-		<!-- MAIN RIGHT-SIDE COLUMN -->
-        <?php include 'pages/'.$_REQUEST['page'].'.php' ?>
 	</div>
 </div>
 <div class="clearfix"></div>
